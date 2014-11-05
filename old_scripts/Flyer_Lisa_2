@@ -1,0 +1,269 @@
+\documentclass[foldmark,10pt,a4paper,notumble]{leaflet}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[scaled=.93]{libertine}
+\usepackage{amssymb,mathtools}
+\usepackage[numbers,sort&compress]{natbib}
+\bibliographystyle{IEEEtran}
+\setlength{\bibsep}{0pt}
+
+\usepackage[ruled,algo2e]{algorithm2e}
+
+\usepackage{xcolor}
+%http://www.colourlovers.com/palette/227080/Sakura_in_the_snow
+\definecolor{SakuraTrunk}{HTML}{170301}
+\definecolor{Grr-ey}{HTML}{333333}
+\definecolor{iPodMini}{HTML}{D1D1D1}
+
+\usepackage{fixltx2e}
+\usepackage[absolute]{textpos}
+\usepackage{graphicx}
+\usepackage{tabularx,multirow,booktabs}
+\usepackage{relsize}
+\newcommand\acronym[1]{\textsmaller{\MakeUppercase{#1}}}
+\newcommand\LI[1]{\textrm{`#1'}}
+
+\usepackage{paralist}
+\setdefaultitem{\textcolor{Grr-ey}{$\blacktriangleright$}}{\textcolor{Grr-ey}{$\vartriangleright$}}{}{}
+
+\title{Low-Cost Construction of a\\Multilingual Lexicon from Bilingual Lists}
+\author{%
+Lian Tze \textsc{Lim}\\%
+Bali \textsc{Ranaivo-Malançon}\\%
+Enya Kong \textsc{Tang}%
+}
+\date{\raisebox{-.2ex}{\includegraphics{external/logo-01}}, Faculty of Information Technology\\Multimedia University, Malaysia}
+
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries\sffamily}{}{0pt}{}[\vskip-1.2em\textcolor{Grr-ey}{\rule{.98\textwidth}{2pt}\hfill\rule{2pt}{2pt}}]
+\titlespacing*{\section}{0pt}{0.5em}{-0.5ex}
+
+
+\begin{document}
+\raggedright
+\begin{center}
+\makeatletter
+{\bfseries\sffamily\LARGE\@title\par}
+\vskip1.5em
+{\large\@author\par}
+\vskip1em
+{\large\@date\par}
+\makeatother
+
+\textcolor{SakuraTrunk}{\rule{\paperwidth}{5pt}\vspace*{-\baselineskip}}
+\textcolor{iPodMini}{\rule{\paperwidth}{2pt}}
+\end{center}
+
+
+\section{Introduction}
+\begin{compactitem}
+\item Bilingual \acronym{mrd}s are good resources for building multilingual lexicons
+\item But \acronym{mrd}s have heterogeneous contents and structures
+\begin{compactitem}
+\item Not all contain rich information (gloss, domain) (Especially so for under-resourced languages)
+\item Different structures (sense granularity, distinctions)
+\end{compactitem}
+\item Lowest common denominator: list of \emph{source language item $\rightarrow$ target language item(s)}
+\item Construct multilingual lexicon using only bilingual lists
+\end{compactitem}
+
+
+
+\section{One-time Inverse Consultation \cite{Bond:Ogura:2008}}
+\begin{compactitem}
+\item Generates a bilingual lexicon for a new language pair from existing bilingual lists 
+\item Given bilingual lexicons $L_1$--$L_2$, $L_2$--$L_3$, $L_3$--$L_2$, generate bilingual lexicon $L_1$--$L_3$
+\item Example: %\hspace{1em}\\[-.8\baselineskip]
+JP--EN, EN--MS, MS--EN lexicons $\Rightarrow$ JP--MS
+
+\begin{center}
+\includegraphics{external/tikz-01}
+\end{center}
+\medskip
+\begin{equation*}
+\text{score}(\text{`tera'}) = 2 \times \frac{|\mathbb{E}_1 \cap \mathbb{E}_2|}{|\mathbb{E}_1| + |\mathbb{E}_2|}=2 \times \frac{2}{3 + 4} = 0.57
+\end{equation*}
+$\therefore$ \raisebox{-.4ex}{\includegraphics{external/CJK}}$\leftrightarrow$ \LI{tera} is more likely to be valid
+\end{compactitem}
+
+
+
+\section{Merging Translation Triples into Sets}
+\begin{compactitem}
+\item Retain \acronym{otic} `middle' language links
+\item For each `head' language \acronym{li}, filter only triples whose score exceed thresholds (See Algorithm 1) 
+
+\begin{algorithm2e*}[p]
+\DontPrintSemicolon 
+\caption{Generating trilingual translation chains}\label{alg:otic:chains}
+\ForAll{lexical items $w_h \in L_1$\label{begin:generate:chains}}{
+   $\mathbb{W}_m \leftarrow$ translations of $w_h$ in $L_2$\;
+	\ForAll{$w_m \in \mathbb{W}_m$}{
+		$\mathbb{W}_t \leftarrow$ translations of $w_m$ in $L_3$\;
+		\ForAll{$w_t \in \mathbb{W}_t$}{
+			Output a translation triple $(w_h, w_m, w_t)$\;
+			$\mathbb{W}_{m_r} \leftarrow$ translations of $w_t$ in $L_2$\;
+			$\text{score}(w_h, w_m, w_t) \leftarrow %
+\displaystyle\sum_{w\in\mathbb{W}_m}%
+\frac{|\text{common words in $w_{m_r} \in \mathbb{W}_{m_r}$ and $w$|}}
+{|\text{words in } w_{m_r}  \in \mathbb{W}_{m_r}|}$\label{triple:score}\;
+		\label{end:generate:chains}}%%% end for all w_t
+	$\text{score}(w_h, w_t) \leftarrow 2 \times %
+\displaystyle\frac{\sum_{w \in \mathbb{W}_m} \text{score}(w_h, w, w_t)}%
+{|\mathbb{W}_m|+ |\mathbb{W}_{m_r}|}$\;
+	}%% end for all w_m
+	$X \leftarrow \max_{w_t \in \mathbb{W}_t} \text{score}(w_h, w_t)$\label{cluster:score}\;
+	\ForAll{distinct translation pairs $(w_h, w_t)$}{
+		\uIf{$\text{score}(w_h, w_t) \geq \alpha X$ or $(\text{score}(w_h, w_t))^2 \geq \beta X$\label{alg:line:param}}{
+			Place $w_h \in L_1$, $w_m \in L_2$, $w_t \in L_3$ from all triples $(w_h, w_{\ldots}, w_t)$ into same translation set\;
+			Record $\text{score}(w_h, w_t)$ and $\text{score}(w_h, w_m, w_t)$\;
+		}
+		\Else{
+			Discard all triples $(w_h, w_{\ldots}, w_t)$\;
+			\tcp{The sets are now grouped by $(w_h, w_t)$}
+		}
+	}
+}% end for all w_h
+
+Merge all  sets containing triples with same $(w_h, w_m)$\;
+Merge all  sets containing triples with same $(w_m, w_t)$\;
+\end{algorithm2e*}
+\item Merge all triples with common bilingual pairs
+\item Malay--English--Chinese example:
+
+\begin{tabularx}{\textwidth}{>{\bfseries\scshape}ll@{\hspace{3em}}>{\bfseries\scshape}lX}
+ms--en & \multicolumn{3}{l}{Kamus Inggeris--Melayu untuk Penterjemah}\\
+en--zh & XDict & zh--en & CC-CEDICT\\
+\end{tabularx}
+\end{compactitem}
+
+{\centering
+\includegraphics{external/tikz-02}\par
+\includegraphics{external/tikz-03}\par
+}
+
+\section{Adding More Languages}
+\begin{compactitem}
+\item Construct $L_1$--$L_2$--$L_4$ triples
+\item Add $L_4$ members to existing $L_1$--$L_2$--$L_3$ clusters with common $L_1$ \& $L_2$ members
+\item Example: Malay--English--Chinese + French, using `ready-made' triples from FeM
+\end{compactitem}
+
+\begin{algorithm2e*}[p]
+\DontPrintSemicolon
+\caption{Adding $L_{k+1}$ to multilingual lexicon $\mathbb{L}$ of $\{L_1, L_2, \ldots, L_k\}$}\label{alg:add:new:language}
+$T \leftarrow $ translation triples of $L_{k+1}, L_m, L_n$ generated by Algorithm~\ref{alg:otic:chains} where $L_m, L_n \in \{L_1, L_2, \ldots, L_k \}$\;
+\ForAll{ $(w_{L_m}, w_{L_n}, w_{L_{k+1})} \in T$}{
+	Add $w_{L_{k+1}}$ to all entries in $\mathbb{L}$ that contains both $w_{L_m}$ and  $w_{L_n}$\;
+}
+\end{algorithm2e*}
+
+{\centering
+\includegraphics{external/tikz-04}\par}
+
+
+\section{Precision of 100 Random Translation Sets}
+\includegraphics{external/tikz-05}\vskip-1ex
+\begin{compactitem}
+\item Precision increases with threshold parameters $\alpha$ and $\beta$
+\item Precision generally around 0.70--0.82; max 0.86
+\item Most false positives are not ranked at top of the list
+\item Many errors caused by incorrect \acronym{pos} assignments
+\end{compactitem}
+
+
+
+\section{$\boldsymbol{F_1}$ and Rand Index of Selected Translation Sets}
+\begin{compactitem}
+\item False positives will frequently arise when `middle' language members are polysemous, e.g.~\LI{plant}, \LI{target}
+\item Evaluate accuracy of selected sets with polysemous `middle' language members
+%
+\begin{align*}
+\text{Precision} & = \frac{\text{TP}}{\text{TP}+\text{FP}}\\[2pt]
+\text{Recall} &= \frac{\text{TP}}{\text{TP}+\text{FN}}\\[2pt]
+F_1 &= \frac{2 \times \text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}\\[2pt]
+\text{RI} &= \frac{\text{TP}+\text{TN}}{\text{TP}+\text{FP}+\text{FN}+\text{TN}}\\
+\end{align*}
+\end{compactitem}
+%
+{\centering\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{\hspace{2pt}}l @{\hspace{.8em}} c @{\hspace{.8em}} c @{\hspace{1.2em}}  c  @{\hspace{.8em}} c @{\hspace{.2em}} ccc @{\hspace{1em}} c@{\hspace{0pt}}}
+\toprule
+Test & \multicolumn{2}{c@{\hspace{1.5em}}}{Rand Index} & \multicolumn{2}{c@{\hspace{1.5em}}}{$F_1$} & \multicolumn{4}{c@{\hspace{1em}}}{ Best accuracy when}\\[-.2ex]
+word & min & max & min & max &&& $\alpha$ & $\beta$\\
+\midrule
+\LI{bank} & 0.417 & 0.611 & 0.588 & 0.632 &&&0.6  & 0.4\\
+\LI{plant} & 0.818 & 0.927 & 0.809 & 0.913 &&& 0.6 & 0.2\\
+\LI{target} & 0.821 & 1.000 & 0.902 & 1.000 &&& 0.4 & 0.2\\
+\LI{letter} & 0.709 & 0.818 & 0.724 & 0.792 &&& 0.8 & 0.2\\
+\bottomrule
+\end{tabular}}\par}
+
+\medskip
+
+\begin{compactitem}
+\item $F_1$ and RI increases with $\alpha$ and $\beta$
+\item But may decrease when they are too high and reject valid members (false negatives)
+\end{compactitem}
+
+
+
+\section{Discussion}
+\begin{compactitem}
+\item Low thresholds ($\alpha,\beta$): more coverage; low precision 
+\item High thresholds: good precision; low coverage
+\item $\alpha \approx 0.6, \beta \approx 0.2$ gives good trade-off between coverage, precision and recall 
+\item Results are encouraging for such simple input data! Especially suitable for under-resourced language pairs
+\item \textbf{Future plan:} Integrate multilingual lexicon into an \acronym{mt} system with \acronym{wsd} and user interaction features
+\end{compactitem}
+
+
+
+\section{Related Work} 
+\begin{compactitem}
+\item Many multilingual lexicon projects \cite{vossen:2004, tufis:cristeau:stamou:2004}) aligned with Princeton WordNet \cite{wordnet:book:1998}
+  \begin{compactitem}
+  \item Overly fine sense distinctions in Princeton WordNet
+  \end{compactitem}
+\item Pan Lexicon \cite{Sammer:Soderland:2007}: compute context vectors of words from monolingual corpora of different languages, then grouping into translation sets by matching context vectors via bilingual lexicons
+  \begin{compactitem}
+  \item Sense distinctions derived from corpus evidence
+  \item Produces many translation sets that contain semantically related but not synonymous words, e.g.~\LI{shoot} and \LI{bullet} (lower precision)
+  \item 44$\,$\%\ precision based on evaluators' opinions (75$\,$\%\ if inter-evaluator agreement is not required)
+  \item Does not handle multi-word expressions 
+  \end{compactitem}
+\item Mark\'{o}, Schulz and Hahn \cite{marko:schulz:hahn:2005} use cognate mappings to derive new translation pairs, validate by processing parallel corpora (medical domain)
+  \begin{compactitem}
+  \item Complex terms indexed on the level of sub-words e.g.~\LI{pseudo$\oplus$hypo$\oplus$para$\oplus$thyroid$\oplus$ism}
+  \item 46$\,$\%\ accuracy for each language pair
+  \item Requires large aligned thesaurus corpora (easier to acquire for specialised domains?)
+  \item Cognate-based approach not applicable for language pairs that are not closely related
+  \end{compactitem}
+\item Lafourcade \cite{Lafourcade:2002}: compute contextual vectors for translation pairs based on gloss text and associated class labels from semantic hierarchy; compare vectors from different bilingual lexicons to detect synonymy
+  \begin{compactitem}
+  \item Resource requirements not available for all language pairs, costly task of assigning class labels
+  \end{compactitem}
+\end{compactitem}
+
+
+
+{\small\bibliography{references}}
+
+
+\vfill
+
+\section{Contact}
+\begin{tabular}{@{}ll}
+Lian Tze \textsc{Lim} & \verb|liantze@gmail.com|\\
+Bali \textsc{Ranaivo-Malançon} & \verb|ranaivo@mmu.edu.my|\\
+Enya Kong \textsc{Tang} & \verb|enyakong@mmu.edu.my|\\
+\end{tabular}
+
+\medskip
+
+\raisebox{-.2ex}{\includegraphics[height=.8em]{external/logo-01}}, Faculty of Information Technology\\
+Multimedia University, Cyberjaya, Malaysia.\\
+\texttt{http://fit.mmu.edu.my/sig/nlp/}
+\end{document}
+
