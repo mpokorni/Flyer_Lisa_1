@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.7.30)  14 NOV 2014 23:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.7.30)  20 NOV 2014 21:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Flyer_Lisa_V016_sprung.tex
-(./Flyer_Lisa_V016_sprung.tex
+**Flyer_Lisa_V017_Zimmerneu.tex
+(./Flyer_Lisa_V017_Zimmerneu.tex
 LaTeX2e <2011/06/27>
 Babel <3.9f> and hyphenation patterns for 78 languages loaded.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/leaflet/leaflet.cls
@@ -742,8 +742,8 @@ Package color Info: Driver file: pdftex.def on input line 130.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
-(./Flyer_Lisa_V016_sprung.aux)
-\openout1 = `Flyer_Lisa_V016_sprung.aux'.
+(./Flyer_Lisa_V017_Zimmerneu.aux)
+\openout1 = `Flyer_Lisa_V017_Zimmerneu.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
 LaTeX Font Info:    ... okay on input line 54.
@@ -815,9 +815,9 @@ LaTeX Info: Redefining \ref on input line 54.
 LaTeX Info: Redefining \pageref on input line 54.
 LaTeX Info: Redefining \nameref on input line 54.
 
-(./Flyer_Lisa_V016_sprung.out) (./Flyer_Lisa_V016_sprung.out)
+(./Flyer_Lisa_V017_Zimmerneu.out) (./Flyer_Lisa_V017_Zimmerneu.out)
 \@outlinefile=\write3
-\openout3 = `Flyer_Lisa_V016_sprung.out'.
+\openout3 = `Flyer_Lisa_V017_Zimmerneu.out'.
 
 LaTeX Info: Redefining \microtypecontext on input line 54.
 Package microtype Info: Generating PDF output.
@@ -894,97 +894,100 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--99
 <Schmetterling3.JPG, id=20, 649.42625pt x 451.6875pt>
 File: Schmetterling3.JPG Graphic file (type jpg)
  <use Schmetterling3.JPG>
-Package pdftex.def Info: Schmetterling3.JPG used on input line 125.
+Package pdftex.def Info: Schmetterling3.JPG used on input line 122.
 (pdftex.def)             Requested size: 246.78453pt x 171.64302pt.
 
-Overfull \hbox (10.63094pt too wide) in paragraph at lines 125--126
+Overfull \hbox (10.63094pt too wide) in paragraph at lines 122--123
  [] 
  []
 
 \LL@boxII=\box33
     [2] ==> [II]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 145.
-<Bild1.jpg, id=21, 963.6pt x 722.7pt>
-File: Bild1.jpg Graphic file (type jpg)
- <use Bild1.jpg>
-Package pdftex.def Info: Bild1.jpg used on input line 148.
-(pdftex.def)             Requested size: 240.89941pt x 180.67455pt.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 142.
+<Bild_Zimmer_Lisa.jpg, id=21, 3886.52pt x 2601.72pt>
+File: Bild_Zimmer_Lisa.jpg Graphic file (type jpg)
 
-Overfull \hbox (4.74582pt too wide) in paragraph at lines 148--149
-[][] 
+<use Bild_Zimmer_Lisa.jpg>
+Package pdftex.def Info: Bild_Zimmer_Lisa.jpg used on input line 146.
+(pdftex.def)             Requested size: 233.18114pt x 156.09647pt.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 160.
+
+Underfull \hbox (badness 1521) in paragraph at lines 160--161
+\T1/ptm/b/n/10 Meine An-wen-dun-gen di-enen der Entspan-nung und
  []
 
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 164.
 \LL@boxIII=\box34
     [3] ==> [III]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 167.
 <Lisa_Sprung_neu.JPG, id=23, 779.91376pt x 476.78125pt>
 File: Lisa_Sprung_neu.JPG Graphic file (type jpg)
 
 <use Lisa_Sprung_neu.JPG>
-Package pdftex.def Info: Lisa_Sprung_neu.JPG used on input line 177.
+Package pdftex.def Info: Lisa_Sprung_neu.JPG used on input line 173.
 (pdftex.def)             Requested size: 233.97594pt x 143.03548pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 179.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 175.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 179.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 175.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 179.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 175.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 191.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 184.
 LaTeX Font Info:    Font shape `TS1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `TS1/ptm/b/n' tried instead on input line 191.
+(Font)              Font shape `TS1/ptm/b/n' tried instead on input line 184.
 \LL@boxIV=\box35
 
     [4] ==> [IV]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 200.
+(hyperref)                removing `\mathsurround' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 200.
+(hyperref)                removing `\z@' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 200.
+(hyperref)                removing `superscript' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 200.
+(hyperref)                removing `\\' on input line 193.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--208
+Underfull \hbox (badness 10000) in paragraph at lines 195--201
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--208
+Underfull \hbox (badness 10000) in paragraph at lines 195--201
 
  []
 
 
-Underfull \hbox (badness 6268) in paragraph at lines 202--208
+Underfull \hbox (badness 6268) in paragraph at lines 195--201
 \T1/ptm/m/n/10 (+20) Diese Lim-i-tierun-gen, wie z.B. Überzeu-gun-gen die
  []
 
 
-Underfull \hbox (badness 1253) in paragraph at lines 202--208
+Underfull \hbox (badness 1253) in paragraph at lines 195--201
 \T1/ptm/m/n/10 (+20) elek-tro-mag-netis-che Ladun-gen in un-serem Gehirn und
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--208
+Underfull \hbox (badness 10000) in paragraph at lines 195--201
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--208
+Underfull \hbox (badness 10000) in paragraph at lines 195--201
 
  []
 
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 212.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 205.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -997,95 +1000,95 @@ Package microtype Info: Loading generic settings for font family
 
     [5] ==> [V]
 
-Underfull \hbox (badness 5133) in paragraph at lines 217--239
+Underfull \hbox (badness 5133) in paragraph at lines 210--232
 \T1/ptm/m/n/10 (+20) Bei stress- und span-nungs-be-d-ingten Kopf-schmerzen.
  []
 
 
-Underfull \hbox (badness 6658) in paragraph at lines 217--239
+Underfull \hbox (badness 6658) in paragraph at lines 210--232
 \T1/ptm/m/n/10 (+20) Kopf-schmerzen, Mi-gräne und Nack-en-verspan-nun-gen
  []
 
 
-Underfull \hbox (badness 2205) in paragraph at lines 217--239
+Underfull \hbox (badness 2205) in paragraph at lines 210--232
 \T1/ptm/m/n/10 (+20) ich eine ganz spezielle Mas-sage - Tech-nik, die Ih-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--239
+Underfull \hbox (badness 10000) in paragraph at lines 210--232
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--239
+Underfull \hbox (badness 10000) in paragraph at lines 210--232
 
  []
 
 
-Underfull \hbox (badness 1371) in paragraph at lines 217--239
+Underfull \hbox (badness 1371) in paragraph at lines 210--232
 \T1/ptm/m/n/10 (+20) Die Meta-mor-phose ist vom Ansatz her bewusstseins-
  []
 
 
-Underfull \hbox (badness 3792) in paragraph at lines 217--239
+Underfull \hbox (badness 3792) in paragraph at lines 210--232
 \T1/ptm/m/n/10 (+20) erweiternd und wirkt lösend auf neg-a-tive seel-is-che
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--239
+Underfull \hbox (badness 10000) in paragraph at lines 210--232
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--239
+Underfull \hbox (badness 10000) in paragraph at lines 210--232
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--239
+Underfull \hbox (badness 10000) in paragraph at lines 210--232
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--239
+Underfull \hbox (badness 10000) in paragraph at lines 210--232
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 241.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 234.
 \LL@boxVI=\box37
     [6] ==> [VI]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 241.
-(./Flyer_Lisa_V016_sprung.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 241.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 241.
-Package rerunfilecheck Info: File `Flyer_Lisa_V016_sprung.out' has not changed.
-
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 234.
+(./Flyer_Lisa_V017_Zimmerneu.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 234.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 234.
+Package rerunfilecheck Info: File `Flyer_Lisa_V017_Zimmerneu.out' has not chang
+ed.
 (rerunfilecheck)             Checksum: 5D9A7A6A8E2CD034B6A70B404BED6C86;284.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 241.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 234.
 
 [V VI I] ==>
 [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [II III IV] ==>
-[2 <./Schmetterling3.JPG> <./Bild1.jpg> <./Lisa_Sprung_neu.JPG>] ) 
+[2 <./Schmetterling3.JPG> <./Bild_Zimmer_Lisa.jpg> <./Lisa_Sprung_neu.JPG>] ) 
 Here is how much of TeX's memory you used:
- 8905 strings out of 493315
- 134421 string characters out of 6137904
- 256430 words of memory out of 5000000
- 12119 multiletter control sequences out of 15000+600000
- 51971 words of font info for 113 fonts, out of 8000000 for 9000
+ 8910 strings out of 493315
+ 134615 string characters out of 6137904
+ 256439 words of memory out of 5000000
+ 12124 multiletter control sequences out of 15000+600000
+ 55311 words of font info for 115 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 34i,8n,35p,673b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/t
-exlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2013/tex
-mf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2013/texmf
--dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2013/texmf-d
-ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/
-type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/
-times/utmri8a.pfb>
-Output written on Flyer_Lisa_V016_sprung.pdf (2 pages, 426229 bytes).
+ 34i,8n,35p,676b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/
+usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texli
+ve/2013/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive
+/2013/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2
+013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-
+dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts
+/type1/urw/times/utmri8a.pfb>
+Output written on Flyer_Lisa_V017_Zimmerneu.pdf (2 pages, 3259865 bytes).
 PDF statistics:
  63 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream
  11 named destinations out of 1000 (max. 500000)
- 30256 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 31280 words of extra memory for PDF output out of 35830 (max. 10000000)
 
