@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.7.30)  24 NOV 2014 20:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.7.30)  24 NOV 2014 20:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Flyer_Lisa_V017_Zimmerneu.tex
-(./Flyer_Lisa_V017_Zimmerneu.tex
+**Flyer_Lisa_V018_Zimmerneu.tex
+(./Flyer_Lisa_V018_Zimmerneu.tex
 LaTeX2e <2011/06/27>
 Babel <3.9f> and hyphenation patterns for 78 languages loaded.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/leaflet/leaflet.cls
@@ -742,8 +742,8 @@ Package color Info: Driver file: pdftex.def on input line 130.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
-(./Flyer_Lisa_V017_Zimmerneu.aux)
-\openout1 = `Flyer_Lisa_V017_Zimmerneu.aux'.
+(./Flyer_Lisa_V018_Zimmerneu.aux)
+\openout1 = `Flyer_Lisa_V018_Zimmerneu.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
 LaTeX Font Info:    ... okay on input line 54.
@@ -815,9 +815,9 @@ LaTeX Info: Redefining \ref on input line 54.
 LaTeX Info: Redefining \pageref on input line 54.
 LaTeX Info: Redefining \nameref on input line 54.
 
-(./Flyer_Lisa_V017_Zimmerneu.out) (./Flyer_Lisa_V017_Zimmerneu.out)
+(./Flyer_Lisa_V018_Zimmerneu.out) (./Flyer_Lisa_V018_Zimmerneu.out)
 \@outlinefile=\write3
-\openout3 = `Flyer_Lisa_V017_Zimmerneu.out'.
+\openout3 = `Flyer_Lisa_V018_Zimmerneu.out'.
 
 LaTeX Info: Redefining \microtypecontext on input line 54.
 Package microtype Info: Generating PDF output.
@@ -905,12 +905,23 @@ Overfull \hbox (10.63094pt too wide) in paragraph at lines 122--123
     [2] ==> [II]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 142.
-<Bild_Zimmer_Lisa.jpg, id=21, 3886.52pt x 2601.72pt>
-File: Bild_Zimmer_Lisa.jpg Graphic file (type jpg)
+<Bild_Zimmer_Lisa2.JPG, id=21, 1943.26pt x 1300.86pt>
+File: Bild_Zimmer_Lisa2.JPG Graphic file (type jpg)
 
-<use Bild_Zimmer_Lisa.jpg>
-Package pdftex.def Info: Bild_Zimmer_Lisa.jpg used on input line 146.
-(pdftex.def)             Requested size: 233.18114pt x 156.09647pt.
+<use Bild_Zimmer_Lisa2.JPG>
+Package pdftex.def Info: Bild_Zimmer_Lisa2.JPG used on input line 146.
+(pdftex.def)             Requested size: 1165.96503pt x 780.52203pt.
+
+Overfull \hbox (929.81143pt too wide) in paragraph at lines 146--147
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 245.6102pt on input line 147.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 160.
 
@@ -922,24 +933,20 @@ Underfull \hbox (badness 1521) in paragraph at lines 160--161
     [3] ==> [III]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 167.
-<Lisa_Sprung_neu.JPG, id=23, 779.91376pt x 476.78125pt>
-File: Lisa_Sprung_neu.JPG Graphic file (type jpg)
-
-<use Lisa_Sprung_neu.JPG>
-Package pdftex.def Info: Lisa_Sprung_neu.JPG used on input line 173.
-(pdftex.def)             Requested size: 233.97594pt x 143.03548pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 175.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 175.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 175.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 184.
 LaTeX Font Info:    Font shape `TS1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `TS1/ptm/b/n' tried instead on input line 184.
 \LL@boxIV=\box35
-
     [4] ==> [IV]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1058,10 +1065,10 @@ Package atveryend Info: Empty hook `BeforeClearDocument' on input line 234.
 \LL@boxVI=\box37
     [6] ==> [VI]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 234.
-(./Flyer_Lisa_V017_Zimmerneu.aux)
+(./Flyer_Lisa_V018_Zimmerneu.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 234.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 234.
-Package rerunfilecheck Info: File `Flyer_Lisa_V017_Zimmerneu.out' has not chang
+Package rerunfilecheck Info: File `Flyer_Lisa_V018_Zimmerneu.out' has not chang
 ed.
 (rerunfilecheck)             Checksum: 5D9A7A6A8E2CD034B6A70B404BED6C86;284.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 234.
@@ -1069,26 +1076,25 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 234.
 [V VI I] ==>
 [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [II III IV] ==>
-[2 <./Schmetterling3.JPG> <./Bild_Zimmer_Lisa.jpg> <./Lisa_Sprung_neu.JPG>] ) 
+[2 <./Schmetterling3.JPG>] ) 
 Here is how much of TeX's memory you used:
- 8910 strings out of 493315
- 134615 string characters out of 6137904
+ 8903 strings out of 493315
+ 134496 string characters out of 6137904
  256439 words of memory out of 5000000
- 12124 multiletter control sequences out of 15000+600000
- 55311 words of font info for 115 fonts, out of 8000000 for 9000
+ 12120 multiletter control sequences out of 15000+600000
+ 54233 words of font info for 114 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 34i,8n,35p,676b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/
-usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texli
-ve/2013/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive
-/2013/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2
-013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-
-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts
-/type1/urw/times/utmri8a.pfb>
-Output written on Flyer_Lisa_V017_Zimmerneu.pdf (2 pages, 3259865 bytes).
+ 34i,8n,35p,676b,331s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips
+/base/8r.enc}{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/cm-super/cm-su
+per-t1.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sftt
+1000.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local
+/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Flyer_Lisa_V018_Zimmerneu.pdf (2 pages, 205111 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
+ 62 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream
  11 named destinations out of 1000 (max. 500000)
- 31280 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 31275 words of extra memory for PDF output out of 35830 (max. 10000000)
 
